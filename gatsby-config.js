@@ -4,11 +4,12 @@ module.exports = {
   siteMetadata: {
     title: "Design System",
     description: "Design System + Gatsby",
-    author: "@evatkautz"
+    author: "@evatkautz",
+    docsLocation: `https://github.com/evatd/design-system-gatsby/tree/master`
   },
   plugins: [
     {
-      resolve: `gatsby-mdx`,
+      resolve: `gatsby-mdx`,  
       options: {
         defaultLayouts: { default: path.resolve("./src/components/layout.js") }
       }

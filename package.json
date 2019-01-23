@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "The Stylist Group",
   "dependencies": {
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
     "@emotion/core": "^10.0.6",
     "@emotion/styled": "^10.0.6",
     "@mdx-js/mdx": "^0.16.6",
@@ -18,10 +19,14 @@
     "gatsby-plugin-sharp": "^2.0.17",
     "gatsby-source-filesystem": "^2.0.8",
     "gatsby-transformer-sharp": "^2.1.10",
+    "lodash.startcase": "^4.4.0",
+    "prism-react-renderer": "^0.1.5",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-helmet": "^5.2.0"
+    "react-feather": "^1.1.5",
+    "react-helmet": "^5.2.0",
+    "react-live": "^1.12.0"
   },
   "keywords": [
     "gatsby"
@@ -35,6 +40,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-do-expressions": "^7.2.0",
     "prettier": "^1.15.2"
   }
 }

@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import Layout from "../components/layout";
 import Header from "../components/header";
 import SEO from "../components/seo";
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 
 <SEO title="Home" keywords={["gatsby", "application", "react"]} />
 
@@ -17,3 +18,14 @@ The purpose of header is to provide navigation and site title.
 <div style={{ maxWidth: "600px", marginBottom: "1.45rem" }}>
   <Header />
 </div>
+<Link to="/haha">Click</Link>
+
+```js react-live
+<Header title="hello" />
+```
+
+<LiveProvider code="<strong>Hey!</strong>">
+  <LiveEditor />
+  <LiveError />
+  <LivePreview />
+</LiveProvider>
