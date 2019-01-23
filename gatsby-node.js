@@ -51,13 +51,22 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   // remote CMS we could also check to see if the parent node was a
   // `File` node here
   if (node.internal.type === "Mdx") {
+    const filePath = node.fileAbsolutePath;
+    const fileName = filePath
+      .split("/")
+      .slice(-1)
+      .pop();
+    // slug value is a respective component's name
+    // file names match components' names,
+    // so we get that value based on the former
+    const componentName = fileName.split(".")[0];
     const value = createFilePath({ node, getNode });
     createNodeField({
       // 1) this is the name of the field you are adding,
       name: "slug",
       // 2) this node refers to each individual MDX
       node,
-      value: `${value}`
+      value: `/components/${componentName}`
     });
   }
 };

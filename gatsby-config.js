@@ -39,9 +39,10 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "docs",
-        path: `${__dirname}/src/pages/`
+        path: `${__dirname}/src`,
+        ignore: [`**/*.js`]
       }
-    }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

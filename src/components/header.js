@@ -20,8 +20,8 @@ const Header = ({ title }) => (
         {title}
       </Link>
       <ul style={{ listStyle: `none`, float: `right` }}>
-        <ListLink to="/patterns/">Patterns</ListLink>
-        <ListLink to="/header/">Header</ListLink>
+        <ListLink to="/components/patterns/">Patterns</ListLink>
+        <ListLink to="/components/header/">Header</ListLink>
       </ul>
     </header>
   </Fragment>
