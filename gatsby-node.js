@@ -61,12 +61,18 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     // so we get that value based on the former
     const componentName = fileName.split(".")[0];
     const value = createFilePath({ node, getNode });
+    console.log(node.frontmatter.title, "frontmatter");
     createNodeField({
       // 1) this is the name of the field you are adding,
       name: "slug",
       // 2) this node refers to each individual MDX
       node,
       value: `/components/${componentName}`
+    });
+    createNodeField({
+      name: "title",
+      node,
+      value: node.frontmatter.title || "Design System"
     });
   }
 };
