@@ -27,7 +27,7 @@ const Navigation = ({ children }) => (
       <>
         {data.allMdx.edges.map(({ node }) => {
           const item = node.frontmatter.title;
-          const slug = navItem.toLowerCase();
+          const slug = item.toLowerCase();
           const ifHomePage = slug === "home";
           return (
             <ul style={{ listStyle: `none`, float: `right` }}>

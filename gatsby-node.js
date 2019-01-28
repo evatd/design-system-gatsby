@@ -37,7 +37,7 @@ exports.createPages = ({ graphql, actions }) => {
             component: path.resolve(`./src/components/posts-page-layout.js`),
             // We can use the values in this context in
             // our page layout component
-            context: { id: node.id }
+            context: { id: node.id, slug: node.fields.slug }
           });
         });
       })
@@ -51,13 +51,13 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   // remote CMS we could also check to see if the parent node was a
   // `File` node here
   if (node.internal.type === "Mdx") {
-    const value = createFilePath({ node, getNode });
+    const slug = createFilePath({ node, getNode, basePath: `pages` });
     createNodeField({
       // 1) this is the name of the field you are adding,
       name: "slug",
       // 2) this node refers to each individual MDX
       node,
-      value: `${value}`
+      value: `${slug}`
     });
   }
 };
