@@ -18,6 +18,9 @@ const Sidebar = () => (
               frontmatter {
                 title
               }
+              fields {
+                slug
+              }
             }
           }
         }
@@ -27,11 +30,10 @@ const Sidebar = () => (
       <>
         {data.allMdx.edges.map(({ node }) => {
           const item = node.frontmatter.title;
-          const slug = item.toLowerCase();
-          const ifHomePage = slug === "home";
+          const slug = node.fields.slug;
           return (
             <ul style={{ listStyle: `none`, float: `right` }}>
-              <ListLink to={ifHomePage ? "/" : slug} key={node.id}>
+              <ListLink to={slug} key={node.id}>
                 {item}
               </ListLink>
             </ul>

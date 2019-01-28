@@ -7,11 +7,10 @@ const ListLink = ({ to, children }) => (
   </li>
 );
 
-const Navigation = ({ slug, navLabel }) => {
- 
+const Navigation = () => {
   return (
     <ul style={{ listStyle: `none`, float: `right` }}>
-      <ListLink to={slug}>{navLabel}</ListLink>
+      <ListLink to="test">{"test"}</ListLink>
     </ul>
   );
 };
