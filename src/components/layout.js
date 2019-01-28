@@ -4,6 +4,8 @@ import styled from "@emotion/styled";
 import { css, Global } from "@emotion/core";
 import { ThemeProvider } from "emotion-theming";
 
+import Sidebar from "../components/sidebar";
+
 import Header from "../components/header";
 
 const globalStyles = css`
@@ -25,15 +27,18 @@ const theme = {
   }
 };
 
-const Layout = ({ children }) => (
-  <Fragment>
-    <Global styles={globalStyles} />
-    <ThemeProvider theme={theme}>
-      <Header />
-      <Wrapper>{children}</Wrapper>
-    </ThemeProvider>
-  </Fragment>
-);
+const Layout = ({ children }) => {
+  return (
+    <Fragment>
+      <Global styles={globalStyles} />
+      <ThemeProvider theme={theme}>
+        <Header />
+        <Sidebar />
+        <Wrapper>{children}</Wrapper>
+      </ThemeProvider>
+    </Fragment>
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired

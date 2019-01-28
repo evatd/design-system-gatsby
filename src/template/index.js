@@ -3,7 +3,15 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import MDXRenderer from "gatsby-mdx/mdx-renderer";
 
-const Template = ({ data: { mdx } }) => {
+const reduceNav = mdx => {
+  console.log(mdx, "mdxreduce");
+  return null;
+};
+
+export default ({ data: { mdx } }) => {
+  console.log(mdx, "mdx");
+  const itemList = reduceNav(mdx);
+
   return (
     <Layout>
       <h1>{mdx.frontmatter.title}</h1>
@@ -28,5 +36,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-export default Template;
