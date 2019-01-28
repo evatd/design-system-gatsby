@@ -38,8 +38,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "docs",
-        path: `${__dirname}/src/pages/`
+        name: "src",
+        path: `${__dirname}/src`
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
