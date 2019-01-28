@@ -3,6 +3,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import MDXRenderer from "gatsby-mdx/mdx-renderer";
 
+// mdx layout
 export default ({ data: { mdx } }) => {
   return (
     <div>
@@ -20,6 +21,8 @@ export default ({ data: { mdx } }) => {
  * because we put it in `context` so Gatsby handles that for us.
  *
  */
+
+// add title here, like id?
 export const pageQuery = graphql`
   query BlogPostQuery($id: String) {
     mdx(id: { eq: $id }) {

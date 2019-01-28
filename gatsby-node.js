@@ -33,11 +33,12 @@ exports.createPages = ({ graphql, actions }) => {
             // This is the slug we created before
             // (or `node.frontmatter.slug`)
             path: node.fields.slug,
+            title: node.frontmatter.title,
             // This component will wrap our MDX content
             component: path.resolve(`./src/components/posts-page-layout.js`),
             // We can use the values in this context in
             // our page layout component
-            context: { id: node.id }
+            context: { id: node.id, title: title }
           });
         });
       })
