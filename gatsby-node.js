@@ -1,6 +1,14 @@
 const { createFilePath } = require("gatsby-source-filesystem");
 const path = require("path");
 
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: { components: path.resolve(__dirname, "src/components") }
+    }
+  });
+};
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
   // We only want to operate on `Mdx` nodes. If we had content from a

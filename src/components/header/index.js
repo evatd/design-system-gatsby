@@ -1,6 +1,7 @@
+
 import { Link, StaticQuery, graphql } from "gatsby";
 import React, { Fragment } from "react";
-import Navigation from "./navigation";
+import Navigation from "components/navigation";
 
 const Header = () => (
   <StaticQuery

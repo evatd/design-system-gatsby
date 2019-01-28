@@ -4,9 +4,8 @@ import styled from "@emotion/styled";
 import { css, Global } from "@emotion/core";
 import { ThemeProvider } from "emotion-theming";
 
-import Sidebar from "../components/sidebar";
-
-import Header from "../components/header";
+import Sidebar from "components/sidebar";
+import Header from "components/header";
 
 const globalStyles = css`
   * {

@@ -10,7 +10,7 @@ module.exports = {
     {
       resolve: `gatsby-mdx`,
       options: {
-        defaultLayouts: { default: path.resolve("./src/components/layout.js") }
+        defaultLayouts: { default: path.resolve("components/layout") }
       }
     },
     "gatsby-plugin-react-helmet",
