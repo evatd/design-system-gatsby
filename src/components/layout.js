@@ -1,11 +1,10 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import { StaticQuery, graphql } from "gatsby";
 import styled from "@emotion/styled";
 import { css, Global } from "@emotion/core";
 import { ThemeProvider } from "emotion-theming";
 
-import Header from "./header";
+import Header from "../components/header";
 
 const globalStyles = css`
   * {
@@ -27,28 +26,13 @@ const theme = {
 };
 
 const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <Global styles={globalStyles} />
-        <ThemeProvider theme={theme}>
-          <Wrapper>
-            <Header title={data.site.siteMetadata.title} />
-            {children}
-          </Wrapper>
-        </ThemeProvider>
-      </>
-    )}
-  />
+  <Fragment>
+    <Global styles={globalStyles} />
+    <ThemeProvider theme={theme}>
+      <Header />
+      <Wrapper>{children}</Wrapper>
+    </ThemeProvider>
+  </Fragment>
 );
 
 Layout.propTypes = {
