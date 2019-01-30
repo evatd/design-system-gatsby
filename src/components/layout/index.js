@@ -1,26 +1,16 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
-import { css, Global } from "@emotion/core";
+import { Global } from "@emotion/core";
 import { ThemeProvider } from "emotion-theming";
 
 import Sidebar from "components/sidebar";
 import Header from "components/header";
 
-const font = require("../../style/font-face").fontFace;
+// create an alias for style
+import { globalStyles } from "../../style/global";
 
-///require
-const globalStyles = css`
-  ${font};
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Hurme Geometric Sans 3";
-  }
-`;
-
-// update width to 100% on mpbile, hide the sidebar
+// update width to 100% on mobile, hide the sidebar
 const Section = styled.section`
   width: 80%;
   padding: 2rem;
