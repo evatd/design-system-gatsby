@@ -15,10 +15,16 @@ const globalStyles = css`
   }
 `;
 
-const Wrapper = styled.section`
-maxWidth: "1500px",
-margin: "0 auto",
-padding: "2rem"
+// update width to 100% on mpbile, hide the sidebar
+const Section = styled.section`
+  width: 80%;
+  padding: 2rem;
+`;
+
+// adjust widths as per breakpoints
+const ContentWrapper = styled.div`
+  max-width: 800px;
+  margin: 0 auto;
 `;
 
 const theme = {
@@ -35,17 +41,9 @@ const Layout = ({ children }) => {
         <Header />
         <div style={{ display: "flex" }}>
           <Sidebar />
-          <div style={{ width: "100%" }}>
-            <Wrapper
-              style={{
-                maxWidth: "1000px",
-                margin: "0 auto",
-                padding: "2rem"
-              }}
-            >
-              {children}
-            </Wrapper>
-          </div>
+          <Section>
+            <ContentWrapper>{children}</ContentWrapper>
+          </Section>
         </div>
       </ThemeProvider>
     </Fragment>

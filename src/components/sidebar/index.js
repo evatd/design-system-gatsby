@@ -23,30 +23,38 @@ const Sidebar = () => (
     `}
     render={data => (
       <>
-        <ul
+        <div
           style={{
-            listStyle: `none`,
-            display: "flex",
-            flexDirection: "column",
-            width: "auto",
-            background: "#F8F8F8",
-            minHeight: "100vh",
-            position: "fixed",
+            width: "20%",
             top: 0,
+            position: "sticky",
             overflowY: "auto",
-            paddingTop: "2rem"
+            height: "100vh"
           }}
         >
-          {data.allMdx.edges.map(({ node }) => {
-            const item = node.frontmatter.title;
-            const slug = node.fields.slug;
-            return (
-              <ListLink to={slug} key={node.id} style={{ padding: "0.5rem 1rem"}}>
-                {item}
-              </ListLink>
-            );
-          })}
-        </ul>
+          <ul
+            style={{
+              listStyle: `none`,
+              background: "#F8F8F8",
+              padding: "1rem",
+              height: "inherit"
+            }}
+          >
+            {data.allMdx.edges.map(({ node }) => {
+              const item = node.frontmatter.title;
+              const slug = node.fields.slug;
+              return (
+                <ListLink
+                  to={slug}
+                  key={node.id}
+                  style={{ padding: "1em 1rem 0.25rem 1rem" }}
+                >
+                  {item}
+                </ListLink>
+              );
+            })}
+          </ul>
+        </div>
       </>
     )}
   />
