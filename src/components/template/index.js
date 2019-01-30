@@ -2,6 +2,7 @@ import React from "react";
 import Heading from "../heading";
 import Paragraph from "../paragraph";
 import List from "../list";
+import Pre from "../pre";
 import Code from "../code";
 import ListItem from "../list-item";
 import Link from "../link";
@@ -15,7 +16,9 @@ export default {
   h6: props => <Heading {...props} as="h6" fontSize="16px" />,
   p: props => <Paragraph {...props} />,
   ul: props => <List {...props} />,
-  code: props => <Code {...props} />,
+  pre: props => <Pre {...props} />,
   li: props => <ListItem {...props} />,
-  a: props => <Link {...props} />
+  a: props => <Link {...props} />,
+  // not reaching nested <code>, e.g. `text`
+  code: props => <Code {...props} />
 };
