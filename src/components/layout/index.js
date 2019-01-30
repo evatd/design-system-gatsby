@@ -32,8 +32,10 @@ const Layout = ({ children }) => {
       <Global styles={globalStyles} />
       <ThemeProvider theme={theme}>
         <Header />
-        <Sidebar />
-        <Wrapper>{children}</Wrapper>
+        <div style={{ display: "flex" }}>
+          <Sidebar />
+          <Wrapper>{children}</Wrapper>
+        </div>
       </ThemeProvider>
     </Fragment>
   );

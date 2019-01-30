@@ -1,4 +1,3 @@
-
 import { Link, StaticQuery, graphql } from "gatsby";
 import React, { Fragment } from "react";
 import Navigation from "components/navigation";
@@ -17,12 +16,19 @@ const Header = () => (
     render={data => (
       <>
         <Fragment>
-          <header style={{ backgroundColor: "beige" }}>
+          <header
+            style={{
+              backgroundColor: "beige",
+              display: "flex",
+              padding: "1rem 0.5rem"
+            }}
+          >
             <Link
               to="/"
               style={{
                 color: "purple",
-                textDecoration: "none"
+                textDecoration: "none",
+                marginLeft: "0.5rem"
               }}
             >
               {data.site.siteMetadata.title}

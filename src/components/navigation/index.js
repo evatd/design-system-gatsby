@@ -1,11 +1,5 @@
-import { Link } from "gatsby";
 import React from "react";
-
-const ListLink = ({ to, children }) => (
-  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
-    <Link to={to}>{children}</Link>
-  </li>
-);
+import ListLink from "components/list-link";
 
 const Navigation = () => {
   return (
@@ -13,7 +7,8 @@ const Navigation = () => {
       style={{
         display: "flex",
         listStyleType: "none",
-        height: "100%"
+        justifyContent: "flex-end",
+        flex: "auto"
       }}
     >
       {Object.entries({
@@ -21,9 +16,9 @@ const Navigation = () => {
         Email: "/email",
         Brand: "/brand"
       }).map(([label, href]) => (
-        <li key={label}>
-          <ListLink to={href}>{label}</ListLink>
-        </li>
+        <ListLink to={href} key={label}>
+          {label}
+        </ListLink>
       ))}
     </ul>
   );

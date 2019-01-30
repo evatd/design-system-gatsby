@@ -15,7 +15,6 @@ export default ({ data: { mdx } }) => {
 
   return (
     <Layout>
-      <h1>{mdx.frontmatter.title}</h1>
       <MDXRenderer>{mdx.code.body}</MDXRenderer>
     </Layout>
   );
