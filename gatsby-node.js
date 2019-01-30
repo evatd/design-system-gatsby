@@ -15,6 +15,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   // remote CMS we could also check to see if the parent node was a
   // `File` node here
   if (node.internal.type === "Mdx") {
+    const parent = getNode(node.parent);
+    let shortenedPath = parent.relativePath.replace(parent.ext, "");
+    console.log(shortenedPath, "this removes the .mdx, outputs the whole path");
     const slug = createFilePath({ node, getNode, basePath: `documentation` });
     createNodeField({
       // 1) this is the name of the field you are adding,

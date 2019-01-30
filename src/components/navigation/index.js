@@ -9,8 +9,22 @@ const ListLink = ({ to, children }) => (
 
 const Navigation = () => {
   return (
-    <ul style={{ listStyle: `none`, float: `right` }}>
-      <ListLink to="test">{"test"}</ListLink>
+    <ul
+      style={{
+        display: "flex",
+        listStyleType: "none",
+        height: "100%"
+      }}
+    >
+      {Object.entries({
+        Web: "/",
+        Email: "/email",
+        Brand: "/brand"
+      }).map(([label, href]) => (
+        <li key={label}>
+          <ListLink to={href}>{label}</ListLink>
+        </li>
+      ))}
     </ul>
   );
 };
