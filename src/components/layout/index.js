@@ -16,8 +16,9 @@ const globalStyles = css`
 `;
 
 const Wrapper = styled.section`
-  align-items: center;
-  padding: 2rem;
+maxWidth: "1500px",
+margin: "0 auto",
+padding: "2rem"
 `;
 
 const theme = {
@@ -34,7 +35,17 @@ const Layout = ({ children }) => {
         <Header />
         <div style={{ display: "flex" }}>
           <Sidebar />
-          <Wrapper>{children}</Wrapper>
+          <div style={{ width: "100%" }}>
+            <Wrapper
+              style={{
+                maxWidth: "1000px",
+                margin: "0 auto",
+                padding: "2rem"
+              }}
+            >
+              {children}
+            </Wrapper>
+          </div>
         </div>
       </ThemeProvider>
     </Fragment>

@@ -18,7 +18,7 @@ const Header = () => (
         <Fragment>
           <header
             style={{
-              backgroundColor: "beige",
+              backgroundColor: "#F8F8F8",
               display: "flex",
               padding: "1rem 0.5rem"
             }}

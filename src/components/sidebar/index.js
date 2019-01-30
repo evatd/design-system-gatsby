@@ -29,11 +29,12 @@ const Sidebar = () => (
             display: "flex",
             flexDirection: "column",
             width: "auto",
-            background: "beige",
+            background: "#F8F8F8",
             minHeight: "100vh",
-            position: "sticky",
+            position: "fixed",
             top: 0,
-            overflowY: "auto"
+            overflowY: "auto",
+            paddingTop: "2rem"
           }}
         >
           {data.allMdx.edges.map(({ node }) => {
