@@ -20,7 +20,7 @@ const Header = () => (
             style={{
               backgroundColor: "#F8F8F8",
               display: "flex",
-              padding: "1rem 0.5rem"
+              padding: "2rem 0.5rem"
             }}
           >
             <Link
@@ -28,7 +28,7 @@ const Header = () => (
               style={{
                 color: "purple",
                 textDecoration: "none",
-                marginLeft: "0.5rem"
+                marginLeft: "1.5rem"
               }}
             >
               {data.site.siteMetadata.title}

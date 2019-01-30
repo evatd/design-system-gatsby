@@ -36,7 +36,7 @@ const Sidebar = () => (
             style={{
               listStyle: `none`,
               background: "#F8F8F8",
-              padding: "1rem",
+              padding: "1rem 0 0 1rem",
               height: "inherit"
             }}
           >
@@ -47,7 +47,7 @@ const Sidebar = () => (
                 <ListLink
                   to={slug}
                   key={node.id}
-                  style={{ padding: "1em 1rem 0.25rem 1rem" }}
+                  style={{ padding: "1em 1rem 0rem 1rem" }}
                 >
                   {item}
                 </ListLink>

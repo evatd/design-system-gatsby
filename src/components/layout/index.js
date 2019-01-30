@@ -7,11 +7,16 @@ import { ThemeProvider } from "emotion-theming";
 import Sidebar from "components/sidebar";
 import Header from "components/header";
 
+const font = require("../../style/font-face").fontFace;
+
+///require
 const globalStyles = css`
+  ${font};
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Hurme Geometric Sans 3";
   }
 `;
 
