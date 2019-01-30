@@ -8,6 +8,7 @@ import Sidebar from "components/sidebar";
 import Header from "components/header";
 
 // create an alias for style
+import theme from "../../style/theme";
 import { globalStyles } from "../../style/global";
 
 // update width to 100% on mobile, hide the sidebar
@@ -22,12 +23,6 @@ const ContentWrapper = styled.div`
   margin: 0 auto;
 `;
 
-const theme = {
-  colors: {
-    red: "#8B0000"
-  }
-};
-
 const Layout = ({ children }) => {
   return (
     <Fragment>
@@ -35,7 +30,7 @@ const Layout = ({ children }) => {
       <ThemeProvider theme={theme}>
         <Header />
         <div style={{ display: "flex" }}>
-          <Sidebar />
+          <Sidebar {...theme} />
           <Section>
             <ContentWrapper>{children}</ContentWrapper>
           </Section>

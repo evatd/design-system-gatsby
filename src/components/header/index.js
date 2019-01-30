@@ -18,7 +18,7 @@ const Header = () => (
         <Fragment>
           <header
             style={{
-              backgroundColor: "#F8F8F8",
+              backgroundColor: "#f3f3f3",
               display: "flex",
               padding: "2rem 0.5rem"
             }}
@@ -26,7 +26,7 @@ const Header = () => (
             <Link
               to="/"
               style={{
-                color: "purple",
+                color: "#1d1d1d",
                 textDecoration: "none",
                 marginLeft: "1.5rem"
               }}

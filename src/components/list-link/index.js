@@ -13,7 +13,7 @@ const ListLink = ({ to, children, ...props }) => (
       to={to}
       style={{
         textDecoration: "none",
-        color: "blue"
+        color: "#1d1d1d"
       }}
     >
       {children}
