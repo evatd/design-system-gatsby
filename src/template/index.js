@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import MDXRenderer from "gatsby-mdx/mdx-renderer";
+import templateComponents from "components/template";
 
 import Layout from "components/layout";
 
@@ -15,7 +16,7 @@ export default ({ data: { mdx } }) => {
 
   return (
     <Layout>
-      <MDXRenderer>{mdx.code.body}</MDXRenderer>
+      <MDXRenderer components={templateComponents}>{mdx.code.body}</MDXRenderer>
     </Layout>
   );
 };
