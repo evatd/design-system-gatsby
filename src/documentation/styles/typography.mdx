@@ -2,6 +2,9 @@
 title: "Typography"
 ---
 
+import Preview from "@shortlist-studio/opal";
+import screenshot from ".././../assets/mobile-preview.png";
+
 # Typography
 
 ## Typography Principles
@@ -16,6 +19,12 @@ Typeface styles are named based on their _appearance_ as opposed to their _purpo
 For example, `Toronto` could be used interchangeably as a heading as well as a body text link.
 
 By default, each group is a `p` and has a `fontSize` of `"xs"`.
+
+## Preview
+
+<div style={{ width: "40%" }}>
+  <Preview screenshot={screenshot} />
+</div>
 
 ### Customising
 
@@ -59,7 +68,7 @@ fontSize={["sm", null, null, "md"]}
 ```
 
 Read more on [_styled-system_ responsive styles](https://github.com/jxnblk/styled-system/blob/master/docs/responsive-styles.md).
-   
+
 ## Text Sizes
 
 Text sizes are based on [power of twos](http://jxnblk.com/writing/posts/mathematical-web-typography/#powers-of-two), with 16px base size.
@@ -80,7 +89,7 @@ We convert `px` values to `rem`, to give more control of text readability to the
 | xxl            | 64     | 4     |
 | xxxl           | 80     | 5     |
 | xxxxl          | 96     | 6     |
-   
+
 ## Tracking and Leading
 
 Deciding the value is dependent on what best suits our product, however, readability is central. For actual values, _Zeplin_ is a good reference point.
