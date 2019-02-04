@@ -1,9 +1,9 @@
 import { Link, StaticQuery, graphql } from "gatsby";
 import React, { Fragment } from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import Navigation from "components/navigation";
 
-const Header = () => (
+const Header = ({ title }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -32,7 +32,7 @@ const Header = () => (
                 marginLeft: "1.5rem"
               }}
             >
-              {data.site.siteMetadata.title}
+              {title}
             </Link>
             <Navigation />
           </header>
@@ -45,6 +45,5 @@ const Header = () => (
 Header.propTypes = {
   title: PropTypes.string.isRequired
 };
-
 
 export default Header;

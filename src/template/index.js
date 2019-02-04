@@ -2,7 +2,6 @@ import React from "react";
 import { graphql } from "gatsby";
 import MDXRenderer from "gatsby-mdx/mdx-renderer";
 import templateComponents from "components/template";
-
 import Layout from "components/layout";
 
 const reduceNav = mdx => {

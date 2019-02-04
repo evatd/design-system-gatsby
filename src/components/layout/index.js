@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
     <Fragment>
       <Global styles={globalStyles} />
       <ThemeProvider theme={theme}>
-        <Header />
+        <Header title="Eva" />
         <div style={{ display: "flex" }}>
           <Sidebar />
           <Section>
