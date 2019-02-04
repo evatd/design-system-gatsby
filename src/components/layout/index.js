@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
       <ThemeProvider theme={theme}>
         <Header />
         <div style={{ display: "flex" }}>
-          <Sidebar {...theme} />
+          <Sidebar />
           <Section>
             <ContentWrapper>{children}</ContentWrapper>
           </Section>

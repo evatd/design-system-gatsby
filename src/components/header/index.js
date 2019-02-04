@@ -1,5 +1,6 @@
 import { Link, StaticQuery, graphql } from "gatsby";
 import React, { Fragment } from "react";
+import PropTypes from 'prop-types';
 import Navigation from "components/navigation";
 
 const Header = () => (
@@ -40,5 +41,10 @@ const Header = () => (
     )}
   />
 );
+
+Header.propTypes = {
+  title: PropTypes.string.isRequired
+};
+
 
 export default Header;

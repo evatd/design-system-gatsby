@@ -1,8 +1,9 @@
 import { StaticQuery, graphql } from "gatsby";
+import { withTheme } from "emotion-theming";
 import React from "react";
 import ListLink from "components/list-link";
 
-const Sidebar = ({ ...theme }) => {
+const Sidebar = ({ theme }) => {
   const { space, colors } = theme;
   return (
     <StaticQuery
@@ -65,4 +66,4 @@ const Sidebar = ({ ...theme }) => {
   );
 };
 
-export default Sidebar;
+export default withTheme(Sidebar);
