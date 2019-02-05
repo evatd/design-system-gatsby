@@ -32,7 +32,7 @@ const Header = ({ title }) => (
                 marginLeft: "1.5rem"
               }}
             >
-              {title}
+              {title || data.site.siteMetadata.title}
             </Link>
             <Navigation />
           </header>
