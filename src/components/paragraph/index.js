@@ -1,16 +1,21 @@
 import React from "react";
+import { css } from "@emotion/core";
 
-// css in these components isn't applied
-// add styles to nested <code> here
 const Paragraph = ({ ...props }) => (
   <p
     {...props}
-    style={{
-      fontSize: "16px",
-      lineHeight: 1.6,
-      marginBottom: "1rem",
-      letterSpacing: "0.01em"
-    }}
+    css={css`
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      letter-spacing: 0.01em;
+      code {
+        color: #3dd2be;
+        font-size: 15px;
+        font-family: monospace;
+        padding: 0.25rem;
+      }
+    `}
   />
 );
 
