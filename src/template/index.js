@@ -4,14 +4,7 @@ import MDXRenderer from "gatsby-mdx/mdx-renderer";
 import templateComponents from "components/template";
 import Layout from "components/layout";
 
-const reduceNav = mdx => {
-  console.log(mdx, "mdxreduce");
-  return null;
-};
-
 export default ({ data: { mdx } }) => {
-  console.log(mdx, "mdx");
-  const itemList = reduceNav(mdx);
 
   return (
     <Layout>
