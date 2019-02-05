@@ -43,6 +43,7 @@ const Header = ({ title }) => (
 );
 
 Header.propTypes = {
+  /* Our title */
   title: PropTypes.string.isRequired
 };
 

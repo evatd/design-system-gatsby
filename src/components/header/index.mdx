@@ -3,6 +3,8 @@ title: "Header"
 ---
 
 import Header from "components/header";
+import Table from "components/table";
+import propTypesToObject from "../../utilities/proptypes-to-object";
 
 # Header
 
@@ -13,5 +15,17 @@ The purpose of header is to provide navigation and site title.
 ### Demo
 
 ```
-<Header />
+<Header title="Code + Design <3" />
 ```
+
+### Props
+
+<div>
+  <Table
+    propTypes={propTypesToObject({
+      propTypes: Header.propTypes
+    })}
+  />
+  <p>{()=> console.log(Header.defaultProps)}</p>
+
+</div>
