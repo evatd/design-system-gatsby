@@ -48,6 +48,7 @@ const getPropInfo = method => {
 // Loops through propType, and returns a human-readable object containing
 // type and required status for each prop.
 const propTypesToObject = ({ propTypes }) => {
+  if (!propTypes) return 
   // Object.keys returns property name in an array, e.g. [title]
   // We add the following arguments to reduce = object and current value, e.g. title
   let newProps = Object.keys(propTypes).reduce((obj, curr) => {

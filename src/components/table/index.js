@@ -35,9 +35,7 @@ const getRows = propTypes =>
   ));
 
 const Table = ({ propTypes }) => (
-  <table
-    style={{ color: "#999", marginTop: "64px", borderCollapse: "collapse" }}
-  >
+  <table style={{ color: "#999", borderCollapse: "collapse" }}>
     <thead>
       <tr>
         <th

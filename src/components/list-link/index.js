@@ -1,5 +1,6 @@
 import { Link } from "gatsby";
 import React from "react";
+import PropTypes from "prop-types";
 
 const ListLink = ({ to, children, ...props }) => (
   <li
@@ -21,5 +22,9 @@ const ListLink = ({ to, children, ...props }) => (
     </Link>
   </li>
 );
+
+ListLink.propTypes = {
+  children: PropTypes.node
+};
 
 export default ListLink;

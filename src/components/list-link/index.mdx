@@ -3,6 +3,8 @@ title: "List Link"
 ---
 
 import ListLink from "./index.js";
+import Table from "components/table";
+import propTypesToObject from "../../utilities/proptypes-to-object";
 
 # List Link
 
@@ -23,3 +25,10 @@ haha
 <!-- {/* <code> inside of a paragraph */} -->
 
 `ha`
+
+### Props
+<Table
+  propTypes={propTypesToObject({
+    propTypes: ListLink.propTypes
+  })}
+/>
