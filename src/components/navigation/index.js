@@ -12,9 +12,9 @@ const Navigation = () => {
       }}
     >
       {Object.entries({
-        Web: "/",
+        Patterns: "/foundations/getting-started/",
         Email: "/email",
-        Brand: "/brand"
+        Practices: "/practices"
       }).map(([label, href]) => (
         <ListLink to={href} key={label}>
           {label}

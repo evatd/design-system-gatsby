@@ -31,7 +31,7 @@ export default {
   ul: props => <List {...props} />,
   pre: props => {
     const demoComponent = props.children.props.props;
-    const isLive = demoComponent.className === "language-jsx";
+    const isLive = demoComponent.className === "language-.jsx";
     return demoComponent && isLive ? <Code {...props} /> : <Pre {...props} />;
   },
   li: props => <ListItem {...props} />,

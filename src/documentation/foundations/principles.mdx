@@ -2,6 +2,24 @@
 title: "Principles"
 ---
 
-# Patterns
+import Preview from "@shortlist-studio/opal";
 
-Welcome to our patterns
+import mobileScreenshot from ".././../assets/mobile-preview.jpg";
+import desktopScreenshot from ".././../assets/desktop-preview.png";
+
+# Principles
+
+Welcome to our principles
+
+## Experience
+
+The feel of our products across devices. Scroll down, it's interactive!
+
+<div style={{ display: "flex", padding: "2rem 0" }}>
+  <div style={{ width: "30%", marginRight: "4rem" }}>
+    <Preview screenshot={mobileScreenshot} />
+  </div>
+  <div style={{ width: "72%" }}>
+    <Preview screenshot={desktopScreenshot} frame="imac" animate={false} />
+  </div>
+</div>
