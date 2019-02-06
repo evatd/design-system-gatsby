@@ -30,11 +30,10 @@ export default {
   p: props => <Paragraph {...props} />,
   ul: props => <List {...props} />,
   pre: props => {
-    console.log(props, "pre props")
-    return<Pre {...props} />
+    const demoComponent = props.children.props.props;
+    const isLive = demoComponent.className === "language-jsx";
+    return demoComponent && isLive ? <Code {...props} /> : <Pre {...props} />;
   },
   li: props => <ListItem {...props} />,
-  a: props => <Link {...props} />,
-  // not reaching nested <code>, e.g. `text`
-  code: props => <Code {...props} />
+  a: props => <Link {...props} />
 };
