@@ -29,7 +29,10 @@ export default {
   h6: props => <Heading {...props} as="h6" fontSize="16px" />,
   p: props => <Paragraph {...props} />,
   ul: props => <List {...props} />,
-  pre: props => <Pre {...props} />,
+  pre: props => {
+    console.log(props, "pre props")
+    return<Pre {...props} />
+  },
   li: props => <ListItem {...props} />,
   a: props => <Link {...props} />,
   // not reaching nested <code>, e.g. `text`

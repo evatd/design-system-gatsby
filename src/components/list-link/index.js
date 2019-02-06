@@ -24,6 +24,7 @@ const ListLink = ({ to, children, ...props }) => (
 );
 
 ListLink.propTypes = {
+  to: PropTypes.string.isRequired,
   children: PropTypes.node
 };
 

@@ -12,8 +12,8 @@ import propTypesToObject from "../../utilities/proptypes-to-object";
 
 <!-- component live -->
 
-```
-<ListLink />
+```jsx
+<ListLink to="/awesome-site">Awesome Site</ListLink>
 ```
 
 <!-- string - live, but undefined. Need to filter these out, render as code blocks only. Flag? -->
@@ -27,6 +27,7 @@ haha
 `ha`
 
 ### Props
+
 <Table
   propTypes={propTypesToObject({
     propTypes: ListLink.propTypes
